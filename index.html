@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Assistência técnica especializada para notebooks em Curitiba. Conserto de computadores Windows e Mac com garantia e atendimento rápido.">
+    <meta name="keywords" content="assistência técnica, notebook, Curitiba, conserto computador, Windows, Mac">
+    <title>NotebookExpert - Assistência Técnica para Notebooks em Curitiba</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .hero-bg {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            transition: transform 0.3s ease;
+        }
+        
+        /* Estilos do Carrossel */
+        .carousel-indicator {
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .carousel-indicator:hover {
+            transform: scale(1.2);
+        }
+        
+        .carousel-indicator.active {
+            transform: scale(1.3);
+        }
+        
+        #reviewsCarousel .flex-shrink-0 {
+            transition: opacity 0.3s ease;
+        }
+        
+        /* Carrossel - Sempre 3 itens visíveis */
+        .carousel-item {
+            min-width: 33.333%; /* Cada item ocupa 1/3 da largura */
+            flex: 0 0 33.333%;
+        }
+        
+        /* Container do carrossel */
+        #reviewsCarousel {
+            width: 200%; /* 6 itens × 33.333% = 200% */
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <img src="https://via.placeholder.com/150x40/1e40af/ffffff?text=NOTEBOOK+EXPERT" 
+                         alt="NotebookExpert Logo" 
+                         class="h-8 w-auto">
+                </div>
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#services" class="text-gray-700 hover:text-blue-600 transition-colors">Serviços</a>
+                    <a href="#about" class="text-gray-700 hover:text-blue-600 transition-colors">Sobre</a>
+                    <a href="#contact" class="text-gray-700 hover:text-blue-600 transition-colors">Contato</a>
+                </nav>
+                <div class="flex items-center">
+                    <span class="text-sm text-gray-600 mr-4">Suporte 24h</span>
+                    <a href="#contact" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors">
+                        Área do Cliente
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-bg text-white py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h1 class="text-4xl md:text-5xl font-bold mb-6">
+                        Assistência técnica para<br>
+                        <span class="text-blue-200">notebooks em Curitiba</span>
+                    </h1>
+                    <p class="text-xl mb-8 text-blue-100">
+                        A melhor de Curitiba em conserto de notebooks e computadores, com atendimento personalizado e garantia total.
+                    </p>
+                    <button class="bg-green-500 text-white px-8 py-3 rounded-lg text-lg font-semibold hover:bg-green-600 transition-colors">
+                        <i class="fab fa-whatsapp mr-2"></i>
+                        Ligue agora! (41) 9999-9999
+                    </button>
+                </div>
+                <div class="relative">
+                    <img src="https://via.placeholder.com/600x400/ffffff/1e40af?text=Tech+Support+Illustration" 
+                         alt="Ilustração de suporte técnico" 
+                         class="w-full h-auto rounded-lg shadow-2xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sistemas Operacionais -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div class="text-center p-8">
+                    <i class="fab fa-windows text-6xl text-blue-600 mb-6"></i>
+                    <h3 class="text-2xl font-bold mb-4">Notebooks & Netbooks</h3>
+                    <p class="text-gray-600">
+                        Instalação Sistema Operacional,<br>
+                        Instalação de Software, Gestão<br>
+                        de Aplicações,<br>
+                        Recuperação de Dados,<br>
+                        Manutenção Preventiva
+                    </p>
+                </div>
+                <div class="text-center p-8">
+                    <i class="fab fa-apple text-6xl text-gray-800 mb-6"></i>
+                    <h3 class="text-2xl font-bold mb-4">MacBook & iMac</h3>
+                    <p class="text-gray-600">
+                        Instalação macOS,<br>
+                        Instalação de Software, Gestão<br>
+                        de Aplicações,<br>
+                        Recuperação de Dados,<br>
+                        Todos os Serviços em geral
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Serviços Principais -->
+    <section id="services" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-lg shadow-md text-center service-card">
+                    <i class="fas fa-clock text-4xl text-blue-600 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-3">Atendimento Rápido</h3>
+                    <p class="text-gray-600">
+                        Ligamos em menos de 2 horas<br>
+                        para te informar sobre o<br>
+                        diagnóstico
+                    </p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-md text-center service-card">
+                    <i class="fas fa-shield-alt text-4xl text-blue-600 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-3">Garantia de Serviço</h3>
+                    <p class="text-gray-600">
+                        Todos os reparos com<br>
+                        garantia de 6 meses
+                    </p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-md text-center service-card">
+                    <i class="fas fa-user-tie text-4xl text-blue-600 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-3">Equipe Especializada</h3>
+                    <p class="text-gray-600">
+                        Laboratório próprio e<br>
+                        técnicos experientes
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Let's Get Started -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Let's Get Started</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="space-y-4">
+                    <div class="flex items-center">
+                        <i class="fas fa-check-circle text-blue-600 mr-3"></i>
+                        <span>Formatação de Notebooks e Computadores</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-check-circle text-blue-600 mr-3"></i>
+                        <span>Instalação de Programas</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-check-circle text-blue-600 mr-3"></i>
+                        <span>Instalação de Vírus</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-check-circle text-blue-600 mr-3"></i>
+                        <span>Remoção de Vírus</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-check-circle text-blue-600 mr-3"></i>
+                        <span>Configuração de WiFi</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-check-circle text-blue-600 mr-3"></i>
+                        <span>Backup de Arquivos</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-check-circle text-blue-600 mr-3"></i>
+                        <span>Recuperação de Arquivos Perdidos</span>
+                    </div>
+                </div>
+                <div class="space-y-4">
+                    <div class="flex items-center">
+                        <i class="fas fa-check-circle text-blue-600 mr-3"></i>
+                        <span>Configuração de Rede Wi-Fi</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-check-circle text-blue-600 mr-3"></i>
+                        <span>Compartilhamento de Impressoras</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-check-circle text-blue-600 mr-3"></i>
+                        <span>Social Internet</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-check-circle text-blue-600 mr-3"></i>
+                        <span>Configuração de Módulo Doméstico</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-check-circle text-blue-600 mr-3"></i>
+                        <span>Otimização Otimizada de Séries</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-check-circle text-blue-600 mr-3"></i>
+                        <span>Compartilhamento de Internet</span>
+                    </div>
+                </div>
+                <div class="space-y-4">
+                    <div class="flex items-center">
+                        <i class="fas fa-check-circle text-blue-600 mr-3"></i>
+                        <span>Será necessário um troca rápida?</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-check-circle text-blue-600 mr-3"></i>
+                        <span>Posta de Atendimento</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-check-circle text-blue-600 mr-3"></i>
+                        <span>Upgrade de Memória RAM</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-check-circle text-blue-600 mr-3"></i>
+                        <span>Mensagem de Suporte</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-check-circle text-blue-600 mr-3"></i>
+                        <span>Instalação de Placa de Vídeo</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-check-circle text-blue-600 mr-3"></i>
+                        <span>Limpeza Física Interna</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-check-circle text-blue-600 mr-3"></i>
+                        <span>Atualização de SO</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Depoimentos -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">O que nossos clientes dizem</h2>
+                <div class="flex items-center justify-center mb-6">
+                    <div class="flex text-yellow-500 text-2xl mr-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="text-gray-600">
+                        <span class="text-3xl font-bold text-gray-800">4.8</span>
+                        <span class="text-lg">/ 5.0</span>
+                    </div>
+                </div>
+                <p class="text-gray-600">Baseado em mais de 150 avaliações no Google</p>
+                <div class="flex items-center justify-center mt-4 space-x-4">
+                    <div class="bg-white px-4 py-2 rounded-lg shadow-md border">
+                        <div class="flex items-center">
+                            <i class="fab fa-google text-blue-600 mr-2"></i>
+                            <span class="text-sm font-medium text-gray-700">Empresa Verificada</span>
+                        </div>
+                    </div>
+                    <a href="https://www.google.com/search?q=notebook+expert+curitiba" 
+                       target="_blank" 
+                       class="inline-flex items-center text-blue-600 hover:text-blue-800 text-sm">
+                        Ver todas as avaliações no Google →
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Carrossel de Depoimentos -->
+            <div class="relative mb-12">
+                <!-- Controles de navegação -->
+                <div class="flex justify-between items-center mb-6">
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-800">Depoimentos dos Clientes</h3>
+                        <p class="text-sm text-gray-500 mt-1">
+                            <span id="currentSlide">1</span> / <span id="totalSlides">2</span>
+                        </p>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <span class="text-sm text-gray-500 hidden sm:block">Navegue com as setas</span>
+                        <div class="flex space-x-2">
+                            <button id="prevBtn" class="bg-white p-2 rounded-full shadow-md hover:shadow-lg transition-shadow border hover:bg-gray-50">
+                                <i class="fas fa-chevron-left text-gray-600"></i>
+                            </button>
+                            <button id="nextBtn" class="bg-white p-2 rounded-full shadow-md hover:shadow-lg transition-shadow border hover:bg-gray-50">
+                                <i class="fas fa-chevron-right text-gray-600"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Container do carrossel -->
+                <div class="overflow-hidden">
+                    <div id="reviewsCarousel" class="flex transition-transform duration-500 ease-in-out">
+                        <!-- Avaliação 1 -->
+                        <div class="flex-shrink-0 carousel-item px-3">
+                            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow h-full">
+                                <div class="flex items-center mb-4">
+                                    <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold mr-4">
+                                        AC
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-gray-800">Ana Clara</h4>
+                                        <div class="flex text-yellow-500 text-sm">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="text-gray-600 italic">"Excelente atendimento! Meu notebook Dell estava com problemas na tela e eles consertaram rapidamente. Preço justo e muita qualidade no serviço."</p>
+                                <div class="text-xs text-gray-400 mt-3">Há 2 semanas</div>
+                            </div>
+                        </div>
+
+                        <!-- Avaliação 2 -->
+                        <div class="flex-shrink-0 carousel-item px-3">
+                            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow h-full">
+                                <div class="flex items-center mb-4">
+                                    <div class="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center text-white font-bold mr-4">
+                                        RF
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-gray-800">Ricardo Ferreira</h4>
+                                        <div class="flex text-yellow-500 text-sm">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="text-gray-600 italic">"Precisei de um conserto urgente para trabalho e eles me atenderam no mesmo dia. Profissionais competentes e honestos. Super recomendo!"</p>
+                                <div class="text-xs text-gray-400 mt-3">Há 1 mês</div>
+                            </div>
+                        </div>
+
+                        <!-- Avaliação 3 -->
+                        <div class="flex-shrink-0 carousel-item px-3">
+                            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow h-full">
+                                <div class="flex items-center mb-4">
+                                    <div class="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center text-white font-bold mr-4">
+                                        MS
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-gray-800">Marina Santos</h4>
+                                        <div class="flex text-yellow-500 text-sm">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="text-gray-600 italic">"Melhor assistência técnica de Curitiba! Recuperaram todos os meus arquivos que pensei ter perdido. Equipe muito atenciosa e preços honestos."</p>
+                                <div class="text-xs text-gray-400 mt-3">Há 3 semanas</div>
+                            </div>
+                        </div>
+
+                        <!-- Avaliação 4 -->
+                        <div class="flex-shrink-0 carousel-item px-3">
+                            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow h-full">
+                                <div class="flex items-center mb-4">
+                                    <div class="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center text-white font-bold mr-4">
+                                        JM
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-gray-800">João Mendes</h4>
+                                        <div class="flex text-yellow-500 text-sm">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="text-gray-600 italic">"Serviço impecável! Meu MacBook Pro estava com problema no HD e eles fizeram um trabalho perfeito. Já é a segunda vez que uso os serviços deles."</p>
+                                <div class="flex items-center justify-between mt-3">
+                                    <div class="text-xs text-gray-400">Há 1 semana</div>
+                                    <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">Recente</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Avaliação 5 -->
+                        <div class="flex-shrink-0 carousel-item px-3">
+                            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow h-full">
+                                <div class="flex items-center mb-4">
+                                    <div class="w-12 h-12 bg-indigo-600 rounded-full flex items-center justify-center text-white font-bold mr-4">
+                                        LC
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-gray-800">Luiza Costa</h4>
+                                        <div class="flex text-yellow-500 text-sm">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="text-gray-600 italic">"Atendimento nota 10! Meu notebook estava lento e com vírus, eles limparam tudo e ainda instalaram um antivírus. Ficou voando!"</p>
+                                <div class="flex items-center justify-between mt-3">
+                                    <div class="text-xs text-gray-400">Há 4 dias</div>
+                                    <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">Novo</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Avaliação 6 -->
+                        <div class="flex-shrink-0 carousel-item px-3">
+                            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow h-full">
+                                <div class="flex items-center mb-4">
+                                    <div class="w-12 h-12 bg-yellow-600 rounded-full flex items-center justify-center text-white font-bold mr-4">
+                                        PS
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-gray-800">Pedro Silva</h4>
+                                        <div class="flex text-yellow-500 text-sm">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="text-gray-600 italic">"Precisava trocar a tela do meu notebook e achei que seria caro. Eles fizeram um orçamento justo e o serviço ficou perfeito. Muito satisfeito!"</p>
+                                <div class="flex items-center justify-between mt-3">
+                                    <div class="text-xs text-gray-400">Há 5 dias</div>
+                                    <span class="bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded-full">Novo</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Indicadores -->
+                <div class="flex justify-center mt-6 space-x-2">
+                    <div class="w-3 h-3 bg-blue-600 rounded-full carousel-indicator active"></div>
+                    <div class="w-3 h-3 bg-gray-300 rounded-full carousel-indicator"></div>
+                </div>
+            </div>
+
+            <!-- Widget do Google Reviews -->
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <h3 class="text-xl font-bold text-center mb-4">Avaliações em Tempo Real</h3>
+                <div class="bg-gray-100 p-4 rounded-lg text-center">
+                    <p class="text-gray-600 mb-4">
+                        <i class="fab fa-google text-2xl text-blue-600 mr-2"></i>
+                        Veja todas as nossas avaliações no Google
+                    </p>
+                    <a href="https://www.google.com/search?q=notebook+expert+curitiba" 
+                       target="_blank" 
+                       class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors inline-flex items-center">
+                        <i class="fab fa-google mr-2"></i>
+                        Ver no Google Reviews
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre Nós -->
+    <section id="about" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl font-bold mb-6 text-blue-600">Do you know who we are?</h2>
+                    <h3 class="text-xl font-semibold mb-4">MORE THAN JUST REPAIR YOUR PRODUCTS.</h3>
+                    <p class="text-gray-600 mb-6">
+                        It would change if years of repairing experience right in your home or office. 
+                        We repair iPhones while you wait, or you can drop off the device, and 
+                        we'll contact you as soon as it's ready. We want to get you back to 
+                        your life as quickly as possible.
+                    </p>
+                    <div class="flex items-center space-x-8">
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center mb-2">
+                                <i class="fas fa-certificate text-2xl text-blue-600"></i>
+                            </div>
+                            <span class="text-sm text-gray-600">ISO</span>
+                        </div>
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center mb-2">
+                                <i class="fas fa-award text-2xl text-blue-600"></i>
+                            </div>
+                            <span class="text-sm text-gray-600">Certified</span>
+                        </div>
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center mb-2">
+                                <i class="fas fa-check-circle text-2xl text-blue-600"></i>
+                            </div>
+                            <span class="text-sm text-gray-600">Verified</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="bg-blue-900 text-white p-6 rounded-lg text-center">
+                        <i class="fas fa-eye text-3xl mb-4"></i>
+                        <h4 class="font-semibold">100% Transparência</h4>
+                    </div>
+                    <div class="bg-blue-900 text-white p-6 rounded-lg text-center">
+                        <i class="fas fa-medal text-3xl mb-4"></i>
+                        <h4 class="font-semibold">Guaranteed Quality</h4>
+                    </div>
+                    <div class="bg-blue-900 text-white p-6 rounded-lg text-center">
+                        <i class="fas fa-handshake text-3xl mb-4"></i>
+                        <h4 class="font-semibold">Reliability</h4>
+                    </div>
+                    <div class="bg-blue-900 text-white p-6 rounded-lg text-center">
+                        <i class="fas fa-star text-3xl mb-4"></i>
+                        <h4 class="font-semibold">Quality</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contact" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold mb-8 text-gray-800">Entre em Contato Agora</h2>
+            <button class="bg-blue-600 text-white px-8 py-3 rounded-lg text-lg font-semibold hover:bg-blue-700 transition-colors">
+                Chamar no WhatsApp
+            </button>
+        </div>
+    </section>
+
+    <!-- Mapa e Informações -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div class="h-64 bg-gray-300 rounded-lg flex items-center justify-center">
+                    <span class="text-gray-600">Mapa - Localização em Curitiba</span>
+                </div>
+                <div class="space-y-6">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">Endereço</h3>
+                        <p class="text-gray-600">
+                            Rua Exemplo, 123<br>
+                            Bairro Central<br>
+                            Curitiba - PR<br>
+                            CEP: 80000-000
+                        </p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">Horário de Funcionamento</h3>
+                        <p class="text-gray-600">
+                            Segunda a Sexta: 8h às 18h<br>
+                            Sábado: 8h às 12h<br>
+                            Domingo: Fechado
+                        </p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">Contato</h3>
+                        <p class="text-gray-600">
+                            Telefone: (41) 9999-9999<br>
+                            Email: contato@notebookexpert.com.br
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Widget oficial do Google -->
+    <iframe src="https://www.google.com/maps/embed?pb=..." width="100%" height="200"></iframe>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <img src="https://via.placeholder.com/150x40/ffffff/1e40af?text=NOTEBOOK+EXPERT" 
+                         alt="NotebookExpert Logo" 
+                         class="h-8 w-auto mb-4">
+                    <p class="text-gray-400 text-sm">
+                        Assistência técnica especializada em notebooks e computadores em Curitiba.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Serviços</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li>Conserto de Notebooks</li>
+                        <li>Manutenção Preventiva</li>
+                        <li>Recuperação de Dados</li>
+                        <li>Upgrade de Hardware</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Contato</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li>Telefone: (41) 9999-9999</li>
+                        <li>Email: contato@notebookexpert.com.br</li>
+                        <li>Endereço: Rua Exemplo, 123</li>
+                        <li>Curitiba - PR</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Redes Sociais</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-sm text-gray-400">
+                <p>&copy; 2024 NotebookExpert. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript para funcionalidades -->
+    <script>
+        // Smooth scrolling para links do menu
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Efeito de hover nos cards de serviço
+        document.querySelectorAll('.service-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-5px)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+            });
+        });
+
+        // Botão do WhatsApp
+        document.querySelectorAll('button').forEach(button => {
+            if (button.textContent.includes('WhatsApp') || button.textContent.includes('Ligue agora')) {
+                button.addEventListener('click', function() {
+                    window.open('https://wa.me/5541999999999?text=Olá! Gostaria de solicitar um orçamento para assistência técnica.', '_blank');
+                });
+            }
+        });
+
+        // Google Reviews Integration (para uso futuro)
+        async function loadGoogleReviews() {
+            // Exemplo de como integrar com Google Places API
+            // const placeId = 'ChIJoVZiXG_E3JQRASdng3sLr-A'; // Place ID da NotebookExpert
+            // const apiKey = 'SUA_API_KEY_AQUI';
+            
+            // Simulação de dados enquanto não temos API key
+            const mockReviews = [
+                {
+                    author_name: "João Silva",
+                    rating: 5,
+                    text: "Excelente serviço! Meu notebook ficou como novo.",
+                    time: new Date().getTime() - 86400000 // 1 dia atrás
+                },
+                {
+                    author_name: "Maria Oliveira", 
+                    rating: 5,
+                    text: "Atendimento rápido e preço justo. Recomendo!",
+                    time: new Date().getTime() - 172800000 // 2 dias atrás
+                }
+            ];
+            
+            return mockReviews;
+        }
+
+        // Função para mostrar avaliações mais recentes
+        function showRecentReviews() {
+            loadGoogleReviews().then(reviews => {
+                console.log('Avaliações carregadas:', reviews);
+                // Aqui você poderia atualizar a UI com as avaliações mais recentes
+            });
+        }
+
+                         // Carregar avaliações quando a página carrega
+        document.addEventListener('DOMContentLoaded', function() {
+            showRecentReviews();
+            initializeCarousel();
+        });
+
+        // Carrossel de Avaliações
+        function initializeCarousel() {
+            const carousel = document.getElementById('reviewsCarousel');
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            const indicators = document.querySelectorAll('.carousel-indicator');
+            
+            let currentIndex = 0;
+            const totalItems = 6;
+            const itemWidth = 33.333; // Cada item ocupa 33.333% (1/3)
+            
+            // Atualizar posição do carrossel
+            function updateCarousel() {
+                // Mover 1 item por vez (33.333% por movimento)
+                const translateX = -currentIndex * itemWidth;
+                carousel.style.transform = `translateX(${translateX}%)`;
+                
+                // Atualizar contador visual
+                document.getElementById('currentSlide').textContent = currentIndex + 1;
+                document.getElementById('totalSlides').textContent = totalItems;
+                
+                // Atualizar indicadores (primeira metade vs segunda metade)
+                const indicatorIndex = currentIndex < 3 ? 0 : 1;
+                indicators.forEach((indicator, index) => {
+                    if (index === indicatorIndex) {
+                        indicator.classList.add('bg-blue-600');
+                        indicator.classList.remove('bg-gray-300');
+                    } else {
+                        indicator.classList.add('bg-gray-300');
+                        indicator.classList.remove('bg-blue-600');
+                    }
+                });
+            }
+            
+            // Próximo slide (movimento infinito)
+            function nextSlide() {
+                currentIndex = (currentIndex + 1) % totalItems;
+                updateCarousel();
+            }
+            
+            // Slide anterior (movimento infinito)
+            function prevSlide() {
+                currentIndex = (currentIndex - 1 + totalItems) % totalItems;
+                updateCarousel();
+            }
+            
+            // Event listeners para botões
+            nextBtn.addEventListener('click', nextSlide);
+            prevBtn.addEventListener('click', prevSlide);
+            
+            // Event listeners para indicadores
+            indicators.forEach((indicator, index) => {
+                indicator.addEventListener('click', () => {
+                    currentIndex = index;
+                    updateCarousel();
+                });
+            });
+            
+            // Suporte a teclado
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'ArrowLeft') prevSlide();
+                if (e.key === 'ArrowRight') nextSlide();
+            });
+            
+            // Touch/Swipe para mobile
+            let startX = 0;
+            let endX = 0;
+            
+            carousel.addEventListener('touchstart', (e) => {
+                startX = e.touches[0].clientX;
+            });
+            
+            carousel.addEventListener('touchmove', (e) => {
+                endX = e.touches[0].clientX;
+            });
+            
+            carousel.addEventListener('touchend', () => {
+                if (startX - endX > 50) nextSlide(); // Swipe left
+                if (endX - startX > 50) prevSlide(); // Swipe right
+            });
+            
+            // Auto-play inteligente
+            let autoplayInterval;
+            let isAutoplayActive = true;
+            
+            function startAutoplay() {
+                if (isAutoplayActive) {
+                    autoplayInterval = setInterval(() => {
+                        nextSlide();
+                    }, 4000); // Muda a cada 4 segundos
+                }
+            }
+            
+            function stopAutoplay() {
+                clearInterval(autoplayInterval);
+            }
+            
+            function resetAutoplay() {
+                stopAutoplay();
+                setTimeout(() => {
+                    startAutoplay();
+                }, 2000); // Reinicia após 2 segundos de inatividade
+            }
+            
+            // Pausar auto-play quando usuário interage
+            [prevBtn, nextBtn].forEach(btn => {
+                btn.addEventListener('click', resetAutoplay);
+            });
+            
+            indicators.forEach(indicator => {
+                indicator.addEventListener('click', resetAutoplay);
+            });
+            
+            // Pausar quando mouse está sobre o carrossel
+            carousel.addEventListener('mouseenter', stopAutoplay);
+            carousel.addEventListener('mouseleave', startAutoplay);
+            
+            // Iniciar auto-play
+            startAutoplay();
+            
+            // Inicializar carrossel
+            updateCarousel();
+        }
+    </script>
+</body>
+</html>

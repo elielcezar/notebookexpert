@@ -1,16 +1,41 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: 'Ubuntu';
+  src: url('./assets/fonts/Ubuntu-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Ubuntu Medium';
+  src: url('./assets/fonts/Ubuntu-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Ubuntu Bold';
+  src: url('./assets/fonts/Ubuntu-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root{
   --darkblue: #001d4c;
   --deepblue: #193061;  
   --blue: #0053b1;
   --lightblue: #4f9ad2;
+  --font-primary: "Ubuntu", sans-serif;  
 }
 
 /* Estilos globais usando @layer base */
 @layer base {
-  body {
-    font-family: 'Inter', sans-serif;
+  body {    
+    font-family: var(--font-primary);    
     @apply text-base text-[--deepblue];
   }
   

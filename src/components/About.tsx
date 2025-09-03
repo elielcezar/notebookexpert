@@ -1,4 +1,4 @@
-import aboutImg from '../assets/about.webp'
+import aboutImg from '../assets/honestidade.webp'
 
 export default function About() {
     return (
@@ -6,13 +6,13 @@ export default function About() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     <div>
-                        <h2 className="text-3xl font-bold mb-6 text-[var(--blue)]">Do you know who we are?</h2>
-                        <h3 className="text-xl font-semibold mb-4">MORE THAN JUST REPAIR YOUR PRODUCTS.</h3>
+                        <h2 className="text-3xl lg:text-4xl font-bold mb-6 text-[var(--blue)]">Sobre a Notebook Expert</h2>
+                        <h3 className="text-2xl font-semibold mb-4">MORE THAN JUST REPAIR YOUR PRODUCTS.</h3>
                         <p className="text-gray-600 mb-6">
-                            It would change if years of repairing experience right in your home or office. 
-                            We repair iPhones while you wait, or you can drop off the device, and 
-                            we'll contact you as soon as it's ready. We want to get you back to 
-                            your life as quickly as possible.
+                        Fundada em 2014, a Notebook Expert é uma empresa especializada em conserto e manutenção de notebooks, com foco na excelência técnica e no atendimento personalizado.
+                        </p>
+                        <p className="text-gray-600 mb-6">
+                        Nossa equipe é composta por técnicos certificados com vasta experiência em diversas marcas e modelos. Utilizamos apenas peças originais e oferecemos garantia estendida em todos os nossos serviços.
                         </p>
                         <div className="flex items-center space-x-8">
                             <div className="text-center">
@@ -36,7 +36,7 @@ export default function About() {
                         </div>
                     </div>
                     <div className="flex align-center justify-center">
-                        <img src={aboutImg} alt="About" className="w-full h-full object-cover" />
+                        <img src={aboutImg} alt="About" className="w-full h-full object-cover" />                        
                     </div>
                 </div>
             </div>

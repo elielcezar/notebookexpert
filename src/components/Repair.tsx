@@ -1,4 +1,4 @@
-import aboutImg from '../assets/honestidade.webp'
+import aboutImg from '../assets/about.webp'
 
 export default function Repair() {
     return (
@@ -9,8 +9,8 @@ export default function Repair() {
                         <img src={aboutImg} alt="About" className="w-full h-full object-cover" />
                     </div>
                     <div>
-                        <h2 className="text-3xl font-bold mb-6 text-[var(--blue)]">Vale a pena arrumar meu notebook?</h2>
-                        <h3 className="text-xl font-semibold mb-4">Em 95% dos casos, vale a pena <strong>sim!</strong></h3>
+                        <h2 className="text-3xl lg:text-4xl font-bold mb-6 text-[var(--blue)]">Vale a pena arrumar meu notebook?</h2>
+                        <h3 className="text-2xl font-bold mb-4">Em 95% dos casos, vale a pena <strong>sim!</strong></h3>
                         <p className="mb-6">
                             É mais acessível que você imagina e todos os serviços tem garantia.
                             Conheça a melhor assistência de notebooks de Curitiba

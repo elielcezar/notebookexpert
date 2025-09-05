@@ -1,3 +1,9 @@
+import bgHighlights from '../assets/bg-highlights.jpg'
+import iconSafety from '../assets/ico-safety.png'
+import iconSpeed from '../assets/ico-speed.png'
+import iconTeams from '../assets/ico-teams.png'
+
+
 export default function Highlights() {
     return (
         <>
@@ -29,11 +35,17 @@ export default function Highlights() {
                     </div>            
                 </div>
             </section>
-            <section id="services" className="py-16 bg-gray-50">
+            <section id="services" className="py-16 bg-gray-50" 
+                style={{
+                    backgroundImage: `url(${bgHighlights})`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                    backgroundRepeat: 'no-repeat'
+                }}>
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         <div className="bg-white p-8 rounded-lg shadow-md text-center service-card">
-                            <i className="fas fa-clock text-4xl text-blue-600 mb-4"></i>
+                            <img src={iconSpeed} alt="Atendimento Rápido" className="w-16 h-16 mb-4" />
                             <h3 className="text-xl font-bold mb-3">Atendimento Rápido</h3>
                             <p className="text-gray-600">
                                 Ligamos em menos de 2 horas<br/>
@@ -42,15 +54,15 @@ export default function Highlights() {
                             </p>
                         </div>
                         <div className="bg-white p-8 rounded-lg shadow-md text-center service-card">
-                            <i className="fas fa-shield-alt text-4xl text-blue-600 mb-4"></i>
+                            <img src={iconSafety} alt="Garantia de Serviço" className="w-16 h-16 mb-4" />
                             <h3 className="text-xl font-bold mb-3">Garantia de Serviço</h3>
                             <p className="text-gray-600">
                                 Todos os reparos com<br/>
                                 garantia de 6 meses
                             </p>
                         </div>
-                        <div className="bg-white p-8 rounded-lg shadow-md text-center service-card">
-                            <i className="fas fa-user-tie text-4xl text-blue-600 mb-4"></i>
+                        <div className="bg-white p-8 rounded-lg shadow-md text-center service-card">                        
+                            <img src={iconTeams} alt="Equipe Especializada" className="w-16 h-16 mb-4" />
                             <h3 className="text-xl font-bold mb-3">Equipe Especializada</h3>
                             <p className="text-gray-600">
                                 Laboratório próprio e<br/>
